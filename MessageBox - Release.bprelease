@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<bpr:release xmlns:bpr="http://www.blueprism.co.uk/product/release">
+    <bpr:name>MessageBox - Release</bpr:name>
+    <bpr:release-notes />
+    <bpr:created>2020-08-20 19:49:18Z</bpr:created>
+    <bpr:package-id>4</bpr:package-id>
+    <bpr:package-name>MessageBoxPop</bpr:package-name>
+    <bpr:user-created-by>admin</bpr:user-created-by>
+    <bpr:contents count="2">
+        <object id="b23163e8-e2db-4120-8217-26efff77c06d" name="MessageBox" xmlns="http://www.blueprism.co.uk/product/process"><process name="MessageBox" version="1.0" bpversion="6.8.0.23415" narrative="" byrefcollection="true" type="object" runmode="Exclusive"><appdef><element name="Application Root"><id>1b33d67c-2dd6-49b7-9719-e6ac8d5583ee</id><type>Application</type><basetype>Application</basetype><datatype>unknown</datatype><diagnose>False</diagnose></element></appdef><view><camerax>0</camerax><cameray>0</cameray><zoom version="2">1.25</zoom></view><preconditions /><endpoint narrative="" /><subsheet subsheetid="598da69b-85a2-4b7e-9988-74a9d4e2e82f" type="CleanUp" published="True"><name>Clean Up</name><view><camerax>0</camerax><cameray>0</cameray><zoom version="2">1.25</zoom></view></subsheet><subsheet subsheetid="518c02fb-b35d-46f8-af24-8eef17d0b1c6" type="Normal" published="False"><name>Action 1</name><view><camerax>0</camerax><cameray>0</cameray><zoom version="2">1.25</zoom></view></subsheet><stage stageid="86f42a9e-6152-40c7-b099-98527cf8bb68" name="Start" type="Start"><loginhibit /><display x="15" y="-105" /><onsuccess>aa84a8a7-b024-412b-b603-3f679b0bfd65</onsuccess></stage><stage stageid="aa84a8a7-b024-412b-b603-3f679b0bfd65" name="End" type="End"><loginhibit /><display x="15" y="90" /></stage><stage stageid="5d47c0a0-ab53-441c-ac5c-51d840d10697" name="Stage1" type="ProcessInfo"><display x="-195" y="-105" w="150" h="90" /><references><reference>System.dll</reference><reference>System.Data.dll</reference><reference>System.Xml.dll</reference><reference>System.Drawing.dll</reference><reference>System.Windows.Forms.dll</reference></references><imports><import>System</import><import>System.Drawing</import><import>System.Data</import><import>System.Windows.Forms</import></imports><language>csharp</language><globalcode><![CDATA[]]></globalcode><code><![CDATA[private bool PopUp(string message, string caption)
+{
+	System.Windows.Forms.MessageBoxButtons buttonOK = System.Windows.Forms.MessageBoxButtons.YesNo;
+
+	System.Windows.Forms.DialogResult result;
+
+	result = System.Windows.Forms.MessageBox.Show(message, caption, buttonOK);
+	
+	bool yes = false;
+	if(result == System.Windows.Forms.DialogResult.Yes)
+		yes = true;
+		
+	return yes;
+}]]></code></stage><stage stageid="850e91e0-c23f-4168-a2da-e6282f3db1e6" name="Clean Up" type="SubSheetInfo"><subsheetid>598da69b-85a2-4b7e-9988-74a9d4e2e82f</subsheetid><display x="-195" y="-105" w="150" h="90" /></stage><stage stageid="e9509d6a-a88e-4693-9286-a63af4d309d6" name="Start" type="Start"><subsheetid>598da69b-85a2-4b7e-9988-74a9d4e2e82f</subsheetid><loginhibit /><display x="15" y="-105" /><onsuccess>1eef7253-08dc-44ea-99b6-0b82071a9144</onsuccess></stage><stage stageid="1eef7253-08dc-44ea-99b6-0b82071a9144" name="End" type="End"><subsheetid>598da69b-85a2-4b7e-9988-74a9d4e2e82f</subsheetid><loginhibit /><display x="15" y="90" /></stage><stage stageid="872fa9f8-aa30-4f2b-b687-00d3b72704dc" name="Action 1" type="SubSheetInfo"><subsheetid>518c02fb-b35d-46f8-af24-8eef17d0b1c6</subsheetid><display x="-195" y="-105" w="150" h="90" /></stage><stage stageid="406e1024-6a06-4ea4-897a-579ae8aa0d68" name="Start" type="Start"><subsheetid>518c02fb-b35d-46f8-af24-8eef17d0b1c6</subsheetid><loginhibit /><display x="15" y="-105" /><inputs><input type="text" name="Caption" stage="Caption" /><input type="text" name="Message" stage="Message" /></inputs><onsuccess>f38a5cb0-82c3-437b-865f-30e9c6c96e72</onsuccess></stage><stage stageid="ef94467d-3491-4ee4-882b-06a00a1701d5" name="End" type="End"><subsheetid>518c02fb-b35d-46f8-af24-8eef17d0b1c6</subsheetid><loginhibit /><display x="15" y="60" /><outputs><output type="flag" name="Confirm" stage="Confirm" /></outputs></stage><stage stageid="c7ab82ca-40a8-496b-9313-cc42d62bf739" name="Note1" type="Note"><subsheetid>598da69b-85a2-4b7e-9988-74a9d4e2e82f</subsheetid><narrative>Clean Up Page
+
+This is an optional page where you might choose to perform some finalisation (or "cleanup") tasks as your business object is closed down.
+
+The cleanup action will be called automatically immediately after closing your business object at the end of a business process.
+
+You will not be able to call this action from a business process, nor will it be called at any other time than before the disposal of the business object.</narrative><display x="-180" y="60" w="180" h="230" /></stage><stage stageid="683b0245-261b-49c7-a780-d335a9ba7397" name="Note2" type="Note"><narrative>Initialise Page
+
+This is an optional page where you might choose to perform some initialisation tasks after your business object is loaded.
+
+The initialise action will be called automatically immediately after loading your business object.
+
+You will not be able to call this action from a business process, nor will it be called at any other time than after the creation of the object.</narrative><display x="-180" y="60" w="180" h="230" /></stage><stage stageid="6f5d1398-5d49-4dd4-83d6-a5d6ea556c44" name="Message" type="Data"><subsheetid>518c02fb-b35d-46f8-af24-8eef17d0b1c6</subsheetid><loginhibit /><display x="-240" y="-15" /><datatype>text</datatype><initialvalue /><private /><alwaysinit /></stage><stage stageid="f38a5cb0-82c3-437b-865f-30e9c6c96e72" name="Code" type="Code"><subsheetid>518c02fb-b35d-46f8-af24-8eef17d0b1c6</subsheetid><loginhibit /><display x="15" y="-15" /><inputs><input type="text" name="Message" expr="[Message]" /><input type="text" name="Caption" expr="[Caption]" /></inputs><outputs><output type="flag" name="Confirm" stage="Confirm" /></outputs><onsuccess>ef94467d-3491-4ee4-882b-06a00a1701d5</onsuccess><code><![CDATA[Confirm = PopUp(Message, Caption);]]></code></stage><stage stageid="a84861ab-bdae-43ad-88ea-00ddf77591df" name="Caption" type="Data"><subsheetid>518c02fb-b35d-46f8-af24-8eef17d0b1c6</subsheetid><display x="-240" y="30" /><datatype>text</datatype><initialvalue /><private /><alwaysinit /></stage><stage stageid="96b37bd9-a68f-49fb-bc2b-ed49113e14fb" name="Data Items" type="Block"><subsheetid>518c02fb-b35d-46f8-af24-8eef17d0b1c6</subsheetid><loginhibit /><display x="-285" y="-45" w="165" h="105" /><font family="Segoe UI" size="10" style="Regular" color="7FB2E5" /></stage><stage stageid="ded6a2a5-fcb4-47a9-b68e-1cc5ecfbe935" name="Confirm" type="Data"><subsheetid>518c02fb-b35d-46f8-af24-8eef17d0b1c6</subsheetid><display x="-165" y="-15" /><datatype>flag</datatype><initialvalue /><private /><alwaysinit /></stage></process></object>
+        <object-group id="1a4c5c4e-12f5-4d74-b6d2-07d640ed6cf0" name="Glencore" isDefaultGroup="False" xmlns="http://www.blueprism.co.uk/product/object-group">
+            <members>
+                <object id="b23163e8-e2db-4120-8217-26efff77c06d" />
+            </members>
+        </object-group>
+    </bpr:contents>
+</bpr:release>
