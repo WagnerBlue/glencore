@@ -1,0 +1,650 @@
+<?xml version="1.0" encoding="utf-16"?>
+<bpr:release xmlns:bpr="http://www.blueprism.co.uk/product/release">
+    <bpr:name>Azure Machine Learning Workspaces</bpr:name>
+    <bpr:release-notes>These APIs allow end users to operate on Azure Machine Learning Workspace resources.</bpr:release-notes>
+    <bpr:created>2020-04-30 00:22:23Z</bpr:created>
+    <bpr:package-id>1</bpr:package-id>
+    <bpr:package-name>Azure Machine Learning Workspaces Service</bpr:package-name>
+    <bpr:user-created-by>RESTgen</bpr:user-created-by>
+    <bpr:contents count="2">
+        <credential id="11f42aa5-1d0d-489c-b482-ec723225f614" name="Azure Machine Learning Workspaces Credential" xmlns="http://www.blueprism.co.uk/product/credential">
+            <description>Azure Active Directory OAuth2 Flow.</description>
+            <credentialType>OAuth2ClientCredentials</credentialType>
+            <members />
+        </credential>
+        <webapiservice id="6cb959b2-7d0a-48c9-85e4-83da1417e2b5" name="Azure Machine Learning Workspaces Service" enabled="true" xmlns="http://www.blueprism.co.uk/product/webapiservice">
+            <configuration baseurl="[Base URL]" xmlns="">
+                <actions>
+                    <action id="1" name="Operations_List" enabled="true" enableRequestOutputParameter="false" disableSendingOfRequest="false">
+                        <description><![CDATA[]]></description>
+                        <request httpmethod="GET" urlpath="/providers/Microsoft.MachineLearningServices/operations?api-version=[api-version]">
+                            <headers />
+                            <bodycontent type="0" />
+                        </request>
+                        <parameters>
+                            <actionparameter name="api-version" expose="true" datatype="64">
+                                <initialvalue><![CDATA[]]></initialvalue>
+                                <description><![CDATA[Version of Azure Machine Learning resource provider API.]]></description>
+                            </actionparameter>
+                        </parameters>
+                        <outputparameters>
+                            <parameters />
+                            <code><![CDATA[]]></code>
+                        </outputparameters>
+                    </action>
+                    <action id="2" name="Quotas_List" enabled="true" enableRequestOutputParameter="false" disableSendingOfRequest="false">
+                        <description><![CDATA[]]></description>
+                        <request httpmethod="GET" urlpath="/subscriptions/[subscriptionId]/providers/Microsoft.MachineLearningServices/locations/[location]/Quotas?api-version=[api-version]">
+                            <headers />
+                            <bodycontent type="0" />
+                        </request>
+                        <parameters>
+                            <actionparameter name="api-version" expose="true" datatype="64">
+                                <initialvalue><![CDATA[]]></initialvalue>
+                                <description><![CDATA[Version of Azure Machine Learning resource provider API.]]></description>
+                            </actionparameter>
+                            <actionparameter name="subscriptionId" expose="true" datatype="64">
+                                <initialvalue><![CDATA[]]></initialvalue>
+                                <description><![CDATA[Azure subscription identifier.]]></description>
+                            </actionparameter>
+                            <actionparameter name="location" expose="true" datatype="64">
+                                <initialvalue><![CDATA[]]></initialvalue>
+                                <description><![CDATA[The location for which resource usage is queried.]]></description>
+                            </actionparameter>
+                        </parameters>
+                        <outputparameters>
+                            <parameters />
+                            <code><![CDATA[]]></code>
+                        </outputparameters>
+                    </action>
+                    <action id="3" name="Quotas_Update" enabled="true" enableRequestOutputParameter="false" disableSendingOfRequest="false">
+                        <description><![CDATA[]]></description>
+                        <request httpmethod="POST" urlpath="/subscriptions/[subscriptionId]/providers/Microsoft.MachineLearningServices/locations/[location]/updateQuotas?api-version=[api-version]">
+                            <headers />
+                            <bodycontent type="1">
+                                <template><![CDATA[[RequestData]]]></template>
+                            </bodycontent>
+                        </request>
+                        <parameters>
+                            <actionparameter name="RequestData" expose="true" datatype="64">
+                                <initialvalue><![CDATA[]]></initialvalue>
+                                <description><![CDATA[The data (ex. JSON) required by the REST service for this method.]]></description>
+                            </actionparameter>
+                            <actionparameter name="location" expose="true" datatype="64">
+                                <initialvalue><![CDATA[]]></initialvalue>
+                                <description><![CDATA[The location for update quota is queried.]]></description>
+                            </actionparameter>
+                            <actionparameter name="api-version" expose="true" datatype="64">
+                                <initialvalue><![CDATA[]]></initialvalue>
+                                <description><![CDATA[Version of Azure Machine Learning resource provider API.]]></description>
+                            </actionparameter>
+                            <actionparameter name="subscriptionId" expose="true" datatype="64">
+                                <initialvalue><![CDATA[]]></initialvalue>
+                                <description><![CDATA[Azure subscription identifier.]]></description>
+                            </actionparameter>
+                        </parameters>
+                        <outputparameters>
+                            <parameters />
+                            <code><![CDATA[]]></code>
+                        </outputparameters>
+                    </action>
+                    <action id="4" name="Usages_List" enabled="true" enableRequestOutputParameter="false" disableSendingOfRequest="false">
+                        <description><![CDATA[]]></description>
+                        <request httpmethod="GET" urlpath="/subscriptions/[subscriptionId]/providers/Microsoft.MachineLearningServices/locations/[location]/usages?api-version=[api-version]">
+                            <headers />
+                            <bodycontent type="0" />
+                        </request>
+                        <parameters>
+                            <actionparameter name="api-version" expose="true" datatype="64">
+                                <initialvalue><![CDATA[]]></initialvalue>
+                                <description><![CDATA[Version of Azure Machine Learning resource provider API.]]></description>
+                            </actionparameter>
+                            <actionparameter name="subscriptionId" expose="true" datatype="64">
+                                <initialvalue><![CDATA[]]></initialvalue>
+                                <description><![CDATA[Azure subscription identifier.]]></description>
+                            </actionparameter>
+                            <actionparameter name="location" expose="true" datatype="64">
+                                <initialvalue><![CDATA[]]></initialvalue>
+                                <description><![CDATA[The location for which resource usage is queried.]]></description>
+                            </actionparameter>
+                        </parameters>
+                        <outputparameters>
+                            <parameters />
+                            <code><![CDATA[]]></code>
+                        </outputparameters>
+                    </action>
+                    <action id="5" name="VirtualMachineSizes_List" enabled="true" enableRequestOutputParameter="false" disableSendingOfRequest="false">
+                        <description><![CDATA[]]></description>
+                        <request httpmethod="GET" urlpath="/subscriptions/[subscriptionId]/providers/Microsoft.MachineLearningServices/locations/[location]/vmSizes?api-version=[api-version]">
+                            <headers />
+                            <bodycontent type="0" />
+                        </request>
+                        <parameters>
+                            <actionparameter name="location" expose="true" datatype="64">
+                                <initialvalue><![CDATA[]]></initialvalue>
+                                <description><![CDATA[The location upon which virtual-machine-sizes is queried.]]></description>
+                            </actionparameter>
+                            <actionparameter name="api-version" expose="true" datatype="64">
+                                <initialvalue><![CDATA[]]></initialvalue>
+                                <description><![CDATA[Version of Azure Machine Learning resource provider API.]]></description>
+                            </actionparameter>
+                            <actionparameter name="subscriptionId" expose="true" datatype="64">
+                                <initialvalue><![CDATA[]]></initialvalue>
+                                <description><![CDATA[Azure subscription identifier.]]></description>
+                            </actionparameter>
+                        </parameters>
+                        <outputparameters>
+                            <parameters />
+                            <code><![CDATA[]]></code>
+                        </outputparameters>
+                    </action>
+                    <action id="6" name="Workspaces_ListBySubscription" enabled="true" enableRequestOutputParameter="false" disableSendingOfRequest="false">
+                        <description><![CDATA[]]></description>
+                        <request httpmethod="GET" urlpath="/subscriptions/[subscriptionId]/providers/Microsoft.MachineLearningServices/workspaces?api-version=[api-version]">
+                            <headers />
+                            <bodycontent type="0" />
+                        </request>
+                        <parameters>
+                            <actionparameter name="api-version" expose="true" datatype="64">
+                                <initialvalue><![CDATA[]]></initialvalue>
+                                <description><![CDATA[Version of Azure Machine Learning resource provider API.]]></description>
+                            </actionparameter>
+                            <actionparameter name="subscriptionId" expose="true" datatype="64">
+                                <initialvalue><![CDATA[]]></initialvalue>
+                                <description><![CDATA[Azure subscription identifier.]]></description>
+                            </actionparameter>
+                        </parameters>
+                        <outputparameters>
+                            <parameters />
+                            <code><![CDATA[]]></code>
+                        </outputparameters>
+                    </action>
+                    <action id="7" name="Workspaces_ListByResourceGroup" enabled="true" enableRequestOutputParameter="false" disableSendingOfRequest="false">
+                        <description><![CDATA[]]></description>
+                        <request httpmethod="GET" urlpath="/subscriptions/[subscriptionId]/resourceGroups/[resourceGroupName]/providers/Microsoft.MachineLearningServices/workspaces?api-version=[api-version]">
+                            <headers />
+                            <bodycontent type="0" />
+                        </request>
+                        <parameters>
+                            <actionparameter name="api-version" expose="true" datatype="64">
+                                <initialvalue><![CDATA[]]></initialvalue>
+                                <description><![CDATA[Version of Azure Machine Learning resource provider API.]]></description>
+                            </actionparameter>
+                            <actionparameter name="subscriptionId" expose="true" datatype="64">
+                                <initialvalue><![CDATA[]]></initialvalue>
+                                <description><![CDATA[Azure subscription identifier.]]></description>
+                            </actionparameter>
+                            <actionparameter name="resourceGroupName" expose="true" datatype="64">
+                                <initialvalue><![CDATA[]]></initialvalue>
+                                <description><![CDATA[Name of the resource group in which workspace is located.]]></description>
+                            </actionparameter>
+                        </parameters>
+                        <outputparameters>
+                            <parameters />
+                            <code><![CDATA[]]></code>
+                        </outputparameters>
+                    </action>
+                    <action id="8" name="Workspaces_Delete" enabled="true" enableRequestOutputParameter="false" disableSendingOfRequest="false">
+                        <description><![CDATA[]]></description>
+                        <request httpmethod="DELETE" urlpath="/subscriptions/[subscriptionId]/resourceGroups/[resourceGroupName]/providers/Microsoft.MachineLearningServices/workspaces/[workspaceName]?api-version=[api-version]">
+                            <headers />
+                            <bodycontent type="0" />
+                        </request>
+                        <parameters>
+                            <actionparameter name="api-version" expose="true" datatype="64">
+                                <initialvalue><![CDATA[]]></initialvalue>
+                                <description><![CDATA[Version of Azure Machine Learning resource provider API.]]></description>
+                            </actionparameter>
+                            <actionparameter name="subscriptionId" expose="true" datatype="64">
+                                <initialvalue><![CDATA[]]></initialvalue>
+                                <description><![CDATA[Azure subscription identifier.]]></description>
+                            </actionparameter>
+                            <actionparameter name="resourceGroupName" expose="true" datatype="64">
+                                <initialvalue><![CDATA[]]></initialvalue>
+                                <description><![CDATA[Name of the resource group in which workspace is located.]]></description>
+                            </actionparameter>
+                            <actionparameter name="workspaceName" expose="true" datatype="64">
+                                <initialvalue><![CDATA[]]></initialvalue>
+                                <description><![CDATA[Name of Azure Machine Learning workspace.]]></description>
+                            </actionparameter>
+                        </parameters>
+                        <outputparameters>
+                            <parameters />
+                            <code><![CDATA[]]></code>
+                        </outputparameters>
+                    </action>
+                    <action id="9" name="Workspaces_Get" enabled="true" enableRequestOutputParameter="false" disableSendingOfRequest="false">
+                        <description><![CDATA[]]></description>
+                        <request httpmethod="GET" urlpath="/subscriptions/[subscriptionId]/resourceGroups/[resourceGroupName]/providers/Microsoft.MachineLearningServices/workspaces/[workspaceName]?api-version=[api-version]">
+                            <headers />
+                            <bodycontent type="0" />
+                        </request>
+                        <parameters>
+                            <actionparameter name="api-version" expose="true" datatype="64">
+                                <initialvalue><![CDATA[]]></initialvalue>
+                                <description><![CDATA[Version of Azure Machine Learning resource provider API.]]></description>
+                            </actionparameter>
+                            <actionparameter name="subscriptionId" expose="true" datatype="64">
+                                <initialvalue><![CDATA[]]></initialvalue>
+                                <description><![CDATA[Azure subscription identifier.]]></description>
+                            </actionparameter>
+                            <actionparameter name="resourceGroupName" expose="true" datatype="64">
+                                <initialvalue><![CDATA[]]></initialvalue>
+                                <description><![CDATA[Name of the resource group in which workspace is located.]]></description>
+                            </actionparameter>
+                            <actionparameter name="workspaceName" expose="true" datatype="64">
+                                <initialvalue><![CDATA[]]></initialvalue>
+                                <description><![CDATA[Name of Azure Machine Learning workspace.]]></description>
+                            </actionparameter>
+                        </parameters>
+                        <outputparameters>
+                            <parameters />
+                            <code><![CDATA[]]></code>
+                        </outputparameters>
+                    </action>
+                    <action id="10" name="Workspaces_Update" enabled="true" enableRequestOutputParameter="false" disableSendingOfRequest="false">
+                        <description><![CDATA[]]></description>
+                        <request httpmethod="PATCH" urlpath="/subscriptions/[subscriptionId]/resourceGroups/[resourceGroupName]/providers/Microsoft.MachineLearningServices/workspaces/[workspaceName]?api-version=[api-version]">
+                            <headers />
+                            <bodycontent type="1">
+                                <template><![CDATA[[RequestData]]]></template>
+                            </bodycontent>
+                        </request>
+                        <parameters>
+                            <actionparameter name="RequestData" expose="true" datatype="64">
+                                <initialvalue><![CDATA[]]></initialvalue>
+                                <description><![CDATA[The data (ex. JSON) required by the REST service for this method.]]></description>
+                            </actionparameter>
+                            <actionparameter name="api-version" expose="true" datatype="64">
+                                <initialvalue><![CDATA[]]></initialvalue>
+                                <description><![CDATA[Version of Azure Machine Learning resource provider API.]]></description>
+                            </actionparameter>
+                            <actionparameter name="subscriptionId" expose="true" datatype="64">
+                                <initialvalue><![CDATA[]]></initialvalue>
+                                <description><![CDATA[Azure subscription identifier.]]></description>
+                            </actionparameter>
+                            <actionparameter name="resourceGroupName" expose="true" datatype="64">
+                                <initialvalue><![CDATA[]]></initialvalue>
+                                <description><![CDATA[Name of the resource group in which workspace is located.]]></description>
+                            </actionparameter>
+                            <actionparameter name="workspaceName" expose="true" datatype="64">
+                                <initialvalue><![CDATA[]]></initialvalue>
+                                <description><![CDATA[Name of Azure Machine Learning workspace.]]></description>
+                            </actionparameter>
+                        </parameters>
+                        <outputparameters>
+                            <parameters />
+                            <code><![CDATA[]]></code>
+                        </outputparameters>
+                    </action>
+                    <action id="11" name="Workspaces_CreateOrUpdate" enabled="true" enableRequestOutputParameter="false" disableSendingOfRequest="false">
+                        <description><![CDATA[]]></description>
+                        <request httpmethod="PUT" urlpath="/subscriptions/[subscriptionId]/resourceGroups/[resourceGroupName]/providers/Microsoft.MachineLearningServices/workspaces/[workspaceName]?api-version=[api-version]">
+                            <headers />
+                            <bodycontent type="1">
+                                <template><![CDATA[[RequestData]]]></template>
+                            </bodycontent>
+                        </request>
+                        <parameters>
+                            <actionparameter name="RequestData" expose="true" datatype="64">
+                                <initialvalue><![CDATA[]]></initialvalue>
+                                <description><![CDATA[The data (ex. JSON) required by the REST service for this method.]]></description>
+                            </actionparameter>
+                            <actionparameter name="api-version" expose="true" datatype="64">
+                                <initialvalue><![CDATA[]]></initialvalue>
+                                <description><![CDATA[Version of Azure Machine Learning resource provider API.]]></description>
+                            </actionparameter>
+                            <actionparameter name="subscriptionId" expose="true" datatype="64">
+                                <initialvalue><![CDATA[]]></initialvalue>
+                                <description><![CDATA[Azure subscription identifier.]]></description>
+                            </actionparameter>
+                            <actionparameter name="resourceGroupName" expose="true" datatype="64">
+                                <initialvalue><![CDATA[]]></initialvalue>
+                                <description><![CDATA[Name of the resource group in which workspace is located.]]></description>
+                            </actionparameter>
+                            <actionparameter name="workspaceName" expose="true" datatype="64">
+                                <initialvalue><![CDATA[]]></initialvalue>
+                                <description><![CDATA[Name of Azure Machine Learning workspace.]]></description>
+                            </actionparameter>
+                        </parameters>
+                        <outputparameters>
+                            <parameters />
+                            <code><![CDATA[]]></code>
+                        </outputparameters>
+                    </action>
+                    <action id="12" name="MachineLearningCompute_ListByWorkspace" enabled="true" enableRequestOutputParameter="false" disableSendingOfRequest="false">
+                        <description><![CDATA[]]></description>
+                        <request httpmethod="GET" urlpath="/subscriptions/[subscriptionId]/resourceGroups/[resourceGroupName]/providers/Microsoft.MachineLearningServices/workspaces/[workspaceName]/computes?api-version=[api-version]">
+                            <headers />
+                            <bodycontent type="0" />
+                        </request>
+                        <parameters>
+                            <actionparameter name="subscriptionId" expose="true" datatype="64">
+                                <initialvalue><![CDATA[]]></initialvalue>
+                                <description><![CDATA[Azure subscription identifier.]]></description>
+                            </actionparameter>
+                            <actionparameter name="resourceGroupName" expose="true" datatype="64">
+                                <initialvalue><![CDATA[]]></initialvalue>
+                                <description><![CDATA[Name of the resource group in which workspace is located.]]></description>
+                            </actionparameter>
+                            <actionparameter name="workspaceName" expose="true" datatype="64">
+                                <initialvalue><![CDATA[]]></initialvalue>
+                                <description><![CDATA[Name of Azure Machine Learning workspace.]]></description>
+                            </actionparameter>
+                            <actionparameter name="api-version" expose="true" datatype="64">
+                                <initialvalue><![CDATA[]]></initialvalue>
+                                <description><![CDATA[Version of Azure Machine Learning resource provider API.]]></description>
+                            </actionparameter>
+                        </parameters>
+                        <outputparameters>
+                            <parameters />
+                            <code><![CDATA[]]></code>
+                        </outputparameters>
+                    </action>
+                    <action id="13" name="MachineLearningCompute_Delete" enabled="true" enableRequestOutputParameter="false" disableSendingOfRequest="false">
+                        <description><![CDATA[]]></description>
+                        <request httpmethod="DELETE" urlpath="/subscriptions/[subscriptionId]/resourceGroups/[resourceGroupName]/providers/Microsoft.MachineLearningServices/workspaces/[workspaceName]/computes/[computeName]?api-version=[api-version]&amp;underlyingResourceAction=[underlyingResourceAction]">
+                            <headers />
+                            <bodycontent type="0" />
+                        </request>
+                        <parameters>
+                            <actionparameter name="subscriptionId" expose="true" datatype="64">
+                                <initialvalue><![CDATA[]]></initialvalue>
+                                <description><![CDATA[Azure subscription identifier.]]></description>
+                            </actionparameter>
+                            <actionparameter name="resourceGroupName" expose="true" datatype="64">
+                                <initialvalue><![CDATA[]]></initialvalue>
+                                <description><![CDATA[Name of the resource group in which workspace is located.]]></description>
+                            </actionparameter>
+                            <actionparameter name="workspaceName" expose="true" datatype="64">
+                                <initialvalue><![CDATA[]]></initialvalue>
+                                <description><![CDATA[Name of Azure Machine Learning workspace.]]></description>
+                            </actionparameter>
+                            <actionparameter name="computeName" expose="true" datatype="64">
+                                <initialvalue><![CDATA[]]></initialvalue>
+                                <description><![CDATA[Name of the Azure Machine Learning compute.]]></description>
+                            </actionparameter>
+                            <actionparameter name="api-version" expose="true" datatype="64">
+                                <initialvalue><![CDATA[]]></initialvalue>
+                                <description><![CDATA[Version of Azure Machine Learning resource provider API.]]></description>
+                            </actionparameter>
+                            <actionparameter name="underlyingResourceAction" expose="true" datatype="64">
+                                <initialvalue><![CDATA[]]></initialvalue>
+                                <description><![CDATA[Delete the underlying compute if 'Delete', or detach the underlying compute from workspace if 'Detach'.]]></description>
+                            </actionparameter>
+                        </parameters>
+                        <outputparameters>
+                            <parameters />
+                            <code><![CDATA[]]></code>
+                        </outputparameters>
+                    </action>
+                    <action id="14" name="MachineLearningCompute_Get" enabled="true" enableRequestOutputParameter="false" disableSendingOfRequest="false">
+                        <description><![CDATA[]]></description>
+                        <request httpmethod="GET" urlpath="/subscriptions/[subscriptionId]/resourceGroups/[resourceGroupName]/providers/Microsoft.MachineLearningServices/workspaces/[workspaceName]/computes/[computeName]?api-version=[api-version]">
+                            <headers />
+                            <bodycontent type="0" />
+                        </request>
+                        <parameters>
+                            <actionparameter name="subscriptionId" expose="true" datatype="64">
+                                <initialvalue><![CDATA[]]></initialvalue>
+                                <description><![CDATA[Azure subscription identifier.]]></description>
+                            </actionparameter>
+                            <actionparameter name="resourceGroupName" expose="true" datatype="64">
+                                <initialvalue><![CDATA[]]></initialvalue>
+                                <description><![CDATA[Name of the resource group in which workspace is located.]]></description>
+                            </actionparameter>
+                            <actionparameter name="workspaceName" expose="true" datatype="64">
+                                <initialvalue><![CDATA[]]></initialvalue>
+                                <description><![CDATA[Name of Azure Machine Learning workspace.]]></description>
+                            </actionparameter>
+                            <actionparameter name="computeName" expose="true" datatype="64">
+                                <initialvalue><![CDATA[]]></initialvalue>
+                                <description><![CDATA[Name of the Azure Machine Learning compute.]]></description>
+                            </actionparameter>
+                            <actionparameter name="api-version" expose="true" datatype="64">
+                                <initialvalue><![CDATA[]]></initialvalue>
+                                <description><![CDATA[Version of Azure Machine Learning resource provider API.]]></description>
+                            </actionparameter>
+                        </parameters>
+                        <outputparameters>
+                            <parameters />
+                            <code><![CDATA[]]></code>
+                        </outputparameters>
+                    </action>
+                    <action id="15" name="MachineLearningCompute_Update" enabled="true" enableRequestOutputParameter="false" disableSendingOfRequest="false">
+                        <description><![CDATA[]]></description>
+                        <request httpmethod="PATCH" urlpath="/subscriptions/[subscriptionId]/resourceGroups/[resourceGroupName]/providers/Microsoft.MachineLearningServices/workspaces/[workspaceName]/computes/[computeName]?api-version=[api-version]">
+                            <headers />
+                            <bodycontent type="1">
+                                <template><![CDATA[[RequestData]]]></template>
+                            </bodycontent>
+                        </request>
+                        <parameters>
+                            <actionparameter name="RequestData" expose="true" datatype="64">
+                                <initialvalue><![CDATA[]]></initialvalue>
+                                <description><![CDATA[The data (ex. JSON) required by the REST service for this method.]]></description>
+                            </actionparameter>
+                            <actionparameter name="subscriptionId" expose="true" datatype="64">
+                                <initialvalue><![CDATA[]]></initialvalue>
+                                <description><![CDATA[Azure subscription identifier.]]></description>
+                            </actionparameter>
+                            <actionparameter name="resourceGroupName" expose="true" datatype="64">
+                                <initialvalue><![CDATA[]]></initialvalue>
+                                <description><![CDATA[Name of the resource group in which workspace is located.]]></description>
+                            </actionparameter>
+                            <actionparameter name="workspaceName" expose="true" datatype="64">
+                                <initialvalue><![CDATA[]]></initialvalue>
+                                <description><![CDATA[Name of Azure Machine Learning workspace.]]></description>
+                            </actionparameter>
+                            <actionparameter name="computeName" expose="true" datatype="64">
+                                <initialvalue><![CDATA[]]></initialvalue>
+                                <description><![CDATA[Name of the Azure Machine Learning compute.]]></description>
+                            </actionparameter>
+                            <actionparameter name="api-version" expose="true" datatype="64">
+                                <initialvalue><![CDATA[]]></initialvalue>
+                                <description><![CDATA[Version of Azure Machine Learning resource provider API.]]></description>
+                            </actionparameter>
+                        </parameters>
+                        <outputparameters>
+                            <parameters />
+                            <code><![CDATA[]]></code>
+                        </outputparameters>
+                    </action>
+                    <action id="16" name="MachineLearningCompute_CreateOrUpdate" enabled="true" enableRequestOutputParameter="false" disableSendingOfRequest="false">
+                        <description><![CDATA[]]></description>
+                        <request httpmethod="PUT" urlpath="/subscriptions/[subscriptionId]/resourceGroups/[resourceGroupName]/providers/Microsoft.MachineLearningServices/workspaces/[workspaceName]/computes/[computeName]?api-version=[api-version]">
+                            <headers />
+                            <bodycontent type="1">
+                                <template><![CDATA[[RequestData]]]></template>
+                            </bodycontent>
+                        </request>
+                        <parameters>
+                            <actionparameter name="RequestData" expose="true" datatype="64">
+                                <initialvalue><![CDATA[]]></initialvalue>
+                                <description><![CDATA[The data (ex. JSON) required by the REST service for this method.]]></description>
+                            </actionparameter>
+                            <actionparameter name="subscriptionId" expose="true" datatype="64">
+                                <initialvalue><![CDATA[]]></initialvalue>
+                                <description><![CDATA[Azure subscription identifier.]]></description>
+                            </actionparameter>
+                            <actionparameter name="resourceGroupName" expose="true" datatype="64">
+                                <initialvalue><![CDATA[]]></initialvalue>
+                                <description><![CDATA[Name of the resource group in which workspace is located.]]></description>
+                            </actionparameter>
+                            <actionparameter name="workspaceName" expose="true" datatype="64">
+                                <initialvalue><![CDATA[]]></initialvalue>
+                                <description><![CDATA[Name of Azure Machine Learning workspace.]]></description>
+                            </actionparameter>
+                            <actionparameter name="computeName" expose="true" datatype="64">
+                                <initialvalue><![CDATA[]]></initialvalue>
+                                <description><![CDATA[Name of the Azure Machine Learning compute.]]></description>
+                            </actionparameter>
+                            <actionparameter name="api-version" expose="true" datatype="64">
+                                <initialvalue><![CDATA[]]></initialvalue>
+                                <description><![CDATA[Version of Azure Machine Learning resource provider API.]]></description>
+                            </actionparameter>
+                        </parameters>
+                        <outputparameters>
+                            <parameters />
+                            <code><![CDATA[]]></code>
+                        </outputparameters>
+                    </action>
+                    <action id="17" name="MachineLearningCompute_ListKeys" enabled="true" enableRequestOutputParameter="false" disableSendingOfRequest="false">
+                        <description><![CDATA[]]></description>
+                        <request httpmethod="POST" urlpath="/subscriptions/[subscriptionId]/resourceGroups/[resourceGroupName]/providers/Microsoft.MachineLearningServices/workspaces/[workspaceName]/computes/[computeName]/listKeys?api-version=[api-version]">
+                            <headers />
+                            <bodycontent type="0" />
+                        </request>
+                        <parameters>
+                            <actionparameter name="subscriptionId" expose="true" datatype="64">
+                                <initialvalue><![CDATA[]]></initialvalue>
+                                <description><![CDATA[Azure subscription identifier.]]></description>
+                            </actionparameter>
+                            <actionparameter name="resourceGroupName" expose="true" datatype="64">
+                                <initialvalue><![CDATA[]]></initialvalue>
+                                <description><![CDATA[Name of the resource group in which workspace is located.]]></description>
+                            </actionparameter>
+                            <actionparameter name="workspaceName" expose="true" datatype="64">
+                                <initialvalue><![CDATA[]]></initialvalue>
+                                <description><![CDATA[Name of Azure Machine Learning workspace.]]></description>
+                            </actionparameter>
+                            <actionparameter name="computeName" expose="true" datatype="64">
+                                <initialvalue><![CDATA[]]></initialvalue>
+                                <description><![CDATA[Name of the Azure Machine Learning compute.]]></description>
+                            </actionparameter>
+                            <actionparameter name="api-version" expose="true" datatype="64">
+                                <initialvalue><![CDATA[]]></initialvalue>
+                                <description><![CDATA[Version of Azure Machine Learning resource provider API.]]></description>
+                            </actionparameter>
+                        </parameters>
+                        <outputparameters>
+                            <parameters />
+                            <code><![CDATA[]]></code>
+                        </outputparameters>
+                    </action>
+                    <action id="18" name="MachineLearningCompute_ListNodes" enabled="true" enableRequestOutputParameter="false" disableSendingOfRequest="false">
+                        <description><![CDATA[]]></description>
+                        <request httpmethod="POST" urlpath="/subscriptions/[subscriptionId]/resourceGroups/[resourceGroupName]/providers/Microsoft.MachineLearningServices/workspaces/[workspaceName]/computes/[computeName]/listNodes?api-version=[api-version]">
+                            <headers />
+                            <bodycontent type="0" />
+                        </request>
+                        <parameters>
+                            <actionparameter name="subscriptionId" expose="true" datatype="64">
+                                <initialvalue><![CDATA[]]></initialvalue>
+                                <description><![CDATA[Azure subscription identifier.]]></description>
+                            </actionparameter>
+                            <actionparameter name="resourceGroupName" expose="true" datatype="64">
+                                <initialvalue><![CDATA[]]></initialvalue>
+                                <description><![CDATA[Name of the resource group in which workspace is located.]]></description>
+                            </actionparameter>
+                            <actionparameter name="workspaceName" expose="true" datatype="64">
+                                <initialvalue><![CDATA[]]></initialvalue>
+                                <description><![CDATA[Name of Azure Machine Learning workspace.]]></description>
+                            </actionparameter>
+                            <actionparameter name="computeName" expose="true" datatype="64">
+                                <initialvalue><![CDATA[]]></initialvalue>
+                                <description><![CDATA[Name of the Azure Machine Learning compute.]]></description>
+                            </actionparameter>
+                            <actionparameter name="api-version" expose="true" datatype="64">
+                                <initialvalue><![CDATA[]]></initialvalue>
+                                <description><![CDATA[Version of Azure Machine Learning resource provider API.]]></description>
+                            </actionparameter>
+                        </parameters>
+                        <outputparameters>
+                            <parameters />
+                            <code><![CDATA[]]></code>
+                        </outputparameters>
+                    </action>
+                    <action id="19" name="Workspaces_ListKeys" enabled="true" enableRequestOutputParameter="false" disableSendingOfRequest="false">
+                        <description><![CDATA[]]></description>
+                        <request httpmethod="POST" urlpath="/subscriptions/[subscriptionId]/resourceGroups/[resourceGroupName]/providers/Microsoft.MachineLearningServices/workspaces/[workspaceName]/listKeys?api-version=[api-version]">
+                            <headers />
+                            <bodycontent type="0" />
+                        </request>
+                        <parameters>
+                            <actionparameter name="api-version" expose="true" datatype="64">
+                                <initialvalue><![CDATA[]]></initialvalue>
+                                <description><![CDATA[Version of Azure Machine Learning resource provider API.]]></description>
+                            </actionparameter>
+                            <actionparameter name="subscriptionId" expose="true" datatype="64">
+                                <initialvalue><![CDATA[]]></initialvalue>
+                                <description><![CDATA[Azure subscription identifier.]]></description>
+                            </actionparameter>
+                            <actionparameter name="resourceGroupName" expose="true" datatype="64">
+                                <initialvalue><![CDATA[]]></initialvalue>
+                                <description><![CDATA[Name of the resource group in which workspace is located.]]></description>
+                            </actionparameter>
+                            <actionparameter name="workspaceName" expose="true" datatype="64">
+                                <initialvalue><![CDATA[]]></initialvalue>
+                                <description><![CDATA[Name of Azure Machine Learning workspace.]]></description>
+                            </actionparameter>
+                        </parameters>
+                        <outputparameters>
+                            <parameters />
+                            <code><![CDATA[]]></code>
+                        </outputparameters>
+                    </action>
+                    <action id="20" name="Workspaces_ResyncKeys" enabled="true" enableRequestOutputParameter="false" disableSendingOfRequest="false">
+                        <description><![CDATA[]]></description>
+                        <request httpmethod="POST" urlpath="/subscriptions/[subscriptionId]/resourceGroups/[resourceGroupName]/providers/Microsoft.MachineLearningServices/workspaces/[workspaceName]/resyncKeys?api-version=[api-version]">
+                            <headers />
+                            <bodycontent type="0" />
+                        </request>
+                        <parameters>
+                            <actionparameter name="api-version" expose="true" datatype="64">
+                                <initialvalue><![CDATA[]]></initialvalue>
+                                <description><![CDATA[Version of Azure Machine Learning resource provider API.]]></description>
+                            </actionparameter>
+                            <actionparameter name="subscriptionId" expose="true" datatype="64">
+                                <initialvalue><![CDATA[]]></initialvalue>
+                                <description><![CDATA[Azure subscription identifier.]]></description>
+                            </actionparameter>
+                            <actionparameter name="resourceGroupName" expose="true" datatype="64">
+                                <initialvalue><![CDATA[]]></initialvalue>
+                                <description><![CDATA[Name of the resource group in which workspace is located.]]></description>
+                            </actionparameter>
+                            <actionparameter name="workspaceName" expose="true" datatype="64">
+                                <initialvalue><![CDATA[]]></initialvalue>
+                                <description><![CDATA[Name of Azure Machine Learning workspace.]]></description>
+                            </actionparameter>
+                        </parameters>
+                        <outputparameters>
+                            <parameters />
+                            <code><![CDATA[]]></code>
+                        </outputparameters>
+                    </action>
+                </actions>
+                <commonparameters>
+                    <actionparameter name="[Base URL]" expose="true" datatype="64">
+                        <initialvalue><![CDATA[https://management.azure.com]]></initialvalue>
+                        <description><![CDATA[The base Url value of the REST service.]]></description>
+                    </actionparameter>
+                </commonparameters>
+                <commonheaders />
+                <commonauthentications>
+                    <authentication type="4" scope="" authorizationserver="https://login.microsoftonline.com/common/oauth2/authorize">
+                        <credential credentialname="Azure Machine Learning Workspaces Credential" exposetoprocess="false" inputparametername="" />
+                    </authentication>
+                </commonauthentications>
+                <commoncode>
+                    <codeproperties code="" language="csharp">
+                        <namespaces>
+                            <namespace>System</namespace>
+                            <namespace>System.Drawing</namespace>
+                            <namespace>System.Data</namespace>
+                        </namespaces>
+                        <references>
+                            <reference>System.dll</reference>
+                            <reference>System.Data.dll</reference>
+                            <reference>System.Xml.dll</reference>
+                            <reference>System.Drawing.dll</reference>
+                        </references>
+                    </codeproperties>
+                </commoncode>
+                <configurationsettings>
+                    <configurationsettings requesttimeout="10" authserverrequesttimeout="10" />
+                </configurationsettings>
+            </configuration>
+        </webapiservice>
+    </bpr:contents>
+</bpr:release>

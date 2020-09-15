@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="utf-16"?>
+<bpr:release xmlns:bpr="http://www.blueprism.co.uk/product/release">
+    <bpr:name>Machine Learning Compute Management Client</bpr:name>
+    <bpr:release-notes>These APIs allow end users to operate on Azure Machine Learning Compute resources. They support the following operations:Create or update a clusterGet a clusterPatch a clusterDelete a clusterGet keys for a clusterCheck if updates are available for system services in a clusterUpdate system services in a clusterGet all clusters in a resource groupGet all clusters in a subscription</bpr:release-notes>
+    <bpr:created>2020-04-30 00:22:17Z</bpr:created>
+    <bpr:package-id>1</bpr:package-id>
+    <bpr:package-name>Machine Learning Compute Management Client Service</bpr:package-name>
+    <bpr:user-created-by>RESTgen</bpr:user-created-by>
+    <bpr:contents count="2">
+        <credential id="a1b05a26-85ae-476b-aaf7-fd10df358cd2" name="Machine Learning Compute Management Client Credential" xmlns="http://www.blueprism.co.uk/product/credential">
+            <description>Azure Active Directory OAuth2 Flow</description>
+            <credentialType>OAuth2ClientCredentials</credentialType>
+            <members />
+        </credential>
+        <webapiservice id="de6d553f-3f06-4a43-a605-c8a6ce513c32" name="Machine Learning Compute Management Client Service" enabled="true" xmlns="http://www.blueprism.co.uk/product/webapiservice">
+            <configuration baseurl="[Base URL]" xmlns="">
+                <actions>
+                    <action id="1" name="MachineLearningCompute_ListAvailableOperations" enabled="true" enableRequestOutputParameter="false" disableSendingOfRequest="false">
+                        <description><![CDATA[]]></description>
+                        <request httpmethod="GET" urlpath="/providers/Microsoft.MachineLearningCompute/operations?api-version=[api-version]">
+                            <headers />
+                            <bodycontent type="0" />
+                        </request>
+                        <parameters>
+                            <actionparameter name="api-version" expose="true" datatype="64">
+                                <initialvalue><![CDATA[]]></initialvalue>
+                                <description><![CDATA[The version of the Microsoft.MachineLearningCompute resource provider API to use.]]></description>
+                            </actionparameter>
+                        </parameters>
+                        <outputparameters>
+                            <parameters />
+                            <code><![CDATA[]]></code>
+                        </outputparameters>
+                    </action>
+                    <action id="2" name="OperationalizationClusters_ListBySubscriptionId" enabled="true" enableRequestOutputParameter="false" disableSendingOfRequest="false">
+                        <description><![CDATA[]]></description>
+                        <request httpmethod="GET" urlpath="/subscriptions/[subscriptionId]/providers/Microsoft.MachineLearningCompute/operationalizationClusters?api-version=[api-version]">
+                            <headers />
+                            <bodycontent type="0" />
+                        </request>
+                        <parameters>
+                            <actionparameter name="api-version" expose="true" datatype="64">
+                                <initialvalue><![CDATA[]]></initialvalue>
+                                <description><![CDATA[The version of the Microsoft.MachineLearningCompute resource provider API to use.]]></description>
+                            </actionparameter>
+                            <actionparameter name="subscriptionId" expose="true" datatype="64">
+                                <initialvalue><![CDATA[]]></initialvalue>
+                                <description><![CDATA[The Azure subscription ID.]]></description>
+                            </actionparameter>
+                        </parameters>
+                        <outputparameters>
+                            <parameters />
+                            <code><![CDATA[]]></code>
+                        </outputparameters>
+                    </action>
+                    <action id="3" name="OperationalizationClusters_ListByResourceGroup" enabled="true" enableRequestOutputParameter="false" disableSendingOfRequest="false">
+                        <description><![CDATA[]]></description>
+                        <request httpmethod="GET" urlpath="/subscriptions/[subscriptionId]/resourceGroups/[resourceGroupName]/providers/Microsoft.MachineLearningCompute/operationalizationClusters?api-version=[api-version]">
+                            <headers />
+                            <bodycontent type="0" />
+                        </request>
+                        <parameters>
+                            <actionparameter name="api-version" expose="true" datatype="64">
+                                <initialvalue><![CDATA[]]></initialvalue>
+                                <description><![CDATA[The version of the Microsoft.MachineLearningCompute resource provider API to use.]]></description>
+                            </actionparameter>
+                            <actionparameter name="subscriptionId" expose="true" datatype="64">
+                                <initialvalue><![CDATA[]]></initialvalue>
+                                <description><![CDATA[The Azure subscription ID.]]></description>
+                            </actionparameter>
+                            <actionparameter name="resourceGroupName" expose="true" datatype="64">
+                                <initialvalue><![CDATA[]]></initialvalue>
+                                <description><![CDATA[Name of the resource group in which the cluster is located.]]></description>
+                            </actionparameter>
+                        </parameters>
+                        <outputparameters>
+                            <parameters />
+                            <code><![CDATA[]]></code>
+                        </outputparameters>
+                    </action>
+                    <action id="4" name="OperationalizationClusters_Delete" enabled="true" enableRequestOutputParameter="false" disableSendingOfRequest="false">
+                        <description><![CDATA[]]></description>
+                        <request httpmethod="DELETE" urlpath="/subscriptions/[subscriptionId]/resourceGroups/[resourceGroupName]/providers/Microsoft.MachineLearningCompute/operationalizationClusters/[clusterName]?api-version=[api-version]">
+                            <headers />
+                            <bodycontent type="0" />
+                        </request>
+                        <parameters>
+                            <actionparameter name="api-version" expose="true" datatype="64">
+                                <initialvalue><![CDATA[]]></initialvalue>
+                                <description><![CDATA[The version of the Microsoft.MachineLearningCompute resource provider API to use.]]></description>
+                            </actionparameter>
+                            <actionparameter name="subscriptionId" expose="true" datatype="64">
+                                <initialvalue><![CDATA[]]></initialvalue>
+                                <description><![CDATA[The Azure subscription ID.]]></description>
+                            </actionparameter>
+                            <actionparameter name="resourceGroupName" expose="true" datatype="64">
+                                <initialvalue><![CDATA[]]></initialvalue>
+                                <description><![CDATA[Name of the resource group in which the cluster is located.]]></description>
+                            </actionparameter>
+                            <actionparameter name="clusterName" expose="true" datatype="64">
+                                <initialvalue><![CDATA[]]></initialvalue>
+                                <description><![CDATA[The name of the cluster.]]></description>
+                            </actionparameter>
+                        </parameters>
+                        <outputparameters>
+                            <parameters />
+                            <code><![CDATA[]]></code>
+                        </outputparameters>
+                    </action>
+                    <action id="5" name="OperationalizationClusters_Get" enabled="true" enableRequestOutputParameter="false" disableSendingOfRequest="false">
+                        <description><![CDATA[]]></description>
+                        <request httpmethod="GET" urlpath="/subscriptions/[subscriptionId]/resourceGroups/[resourceGroupName]/providers/Microsoft.MachineLearningCompute/operationalizationClusters/[clusterName]?api-version=[api-version]">
+                            <headers />
+                            <bodycontent type="0" />
+                        </request>
+                        <parameters>
+                            <actionparameter name="api-version" expose="true" datatype="64">
+                                <initialvalue><![CDATA[]]></initialvalue>
+                                <description><![CDATA[The version of the Microsoft.MachineLearningCompute resource provider API to use.]]></description>
+                            </actionparameter>
+                            <actionparameter name="subscriptionId" expose="true" datatype="64">
+                                <initialvalue><![CDATA[]]></initialvalue>
+                                <description><![CDATA[The Azure subscription ID.]]></description>
+                            </actionparameter>
+                            <actionparameter name="resourceGroupName" expose="true" datatype="64">
+                                <initialvalue><![CDATA[]]></initialvalue>
+                                <description><![CDATA[Name of the resource group in which the cluster is located.]]></description>
+                            </actionparameter>
+                            <actionparameter name="clusterName" expose="true" datatype="64">
+                                <initialvalue><![CDATA[]]></initialvalue>
+                                <description><![CDATA[The name of the cluster.]]></description>
+                            </actionparameter>
+                        </parameters>
+                        <outputparameters>
+                            <parameters />
+                            <code><![CDATA[]]></code>
+                        </outputparameters>
+                    </action>
+                    <action id="6" name="OperationalizationClusters_Update" enabled="true" enableRequestOutputParameter="false" disableSendingOfRequest="false">
+                        <description><![CDATA[]]></description>
+                        <request httpmethod="PATCH" urlpath="/subscriptions/[subscriptionId]/resourceGroups/[resourceGroupName]/providers/Microsoft.MachineLearningCompute/operationalizationClusters/[clusterName]?api-version=[api-version]">
+                            <headers />
+                            <bodycontent type="1">
+                                <template><![CDATA[[RequestData]]]></template>
+                            </bodycontent>
+                        </request>
+                        <parameters>
+                            <actionparameter name="RequestData" expose="true" datatype="64">
+                                <initialvalue><![CDATA[]]></initialvalue>
+                                <description><![CDATA[The data (ex. JSON) required by the REST service for this method.]]></description>
+                            </actionparameter>
+                            <actionparameter name="api-version" expose="true" datatype="64">
+                                <initialvalue><![CDATA[]]></initialvalue>
+                                <description><![CDATA[The version of the Microsoft.MachineLearningCompute resource provider API to use.]]></description>
+                            </actionparameter>
+                            <actionparameter name="subscriptionId" expose="true" datatype="64">
+                                <initialvalue><![CDATA[]]></initialvalue>
+                                <description><![CDATA[The Azure subscription ID.]]></description>
+                            </actionparameter>
+                            <actionparameter name="resourceGroupName" expose="true" datatype="64">
+                                <initialvalue><![CDATA[]]></initialvalue>
+                                <description><![CDATA[Name of the resource group in which the cluster is located.]]></description>
+                            </actionparameter>
+                            <actionparameter name="clusterName" expose="true" datatype="64">
+                                <initialvalue><![CDATA[]]></initialvalue>
+                                <description><![CDATA[The name of the cluster.]]></description>
+                            </actionparameter>
+                        </parameters>
+                        <outputparameters>
+                            <parameters />
+                            <code><![CDATA[]]></code>
+                        </outputparameters>
+                    </action>
+                    <action id="7" name="OperationalizationClusters_CreateOrUpdate" enabled="true" enableRequestOutputParameter="false" disableSendingOfRequest="false">
+                        <description><![CDATA[]]></description>
+                        <request httpmethod="PUT" urlpath="/subscriptions/[subscriptionId]/resourceGroups/[resourceGroupName]/providers/Microsoft.MachineLearningCompute/operationalizationClusters/[clusterName]?api-version=[api-version]">
+                            <headers />
+                            <bodycontent type="1">
+                                <template><![CDATA[[RequestData]]]></template>
+                            </bodycontent>
+                        </request>
+                        <parameters>
+                            <actionparameter name="RequestData" expose="true" datatype="64">
+                                <initialvalue><![CDATA[]]></initialvalue>
+                                <description><![CDATA[The data (ex. JSON) required by the REST service for this method.]]></description>
+                            </actionparameter>
+                            <actionparameter name="api-version" expose="true" datatype="64">
+                                <initialvalue><![CDATA[]]></initialvalue>
+                                <description><![CDATA[The version of the Microsoft.MachineLearningCompute resource provider API to use.]]></description>
+                            </actionparameter>
+                            <actionparameter name="subscriptionId" expose="true" datatype="64">
+                                <initialvalue><![CDATA[]]></initialvalue>
+                                <description><![CDATA[The Azure subscription ID.]]></description>
+                            </actionparameter>
+                            <actionparameter name="resourceGroupName" expose="true" datatype="64">
+                                <initialvalue><![CDATA[]]></initialvalue>
+                                <description><![CDATA[Name of the resource group in which the cluster is located.]]></description>
+                            </actionparameter>
+                            <actionparameter name="clusterName" expose="true" datatype="64">
+                                <initialvalue><![CDATA[]]></initialvalue>
+                                <description><![CDATA[The name of the cluster.]]></description>
+                            </actionparameter>
+                        </parameters>
+                        <outputparameters>
+                            <parameters />
+                            <code><![CDATA[]]></code>
+                        </outputparameters>
+                    </action>
+                    <action id="8" name="OperationalizationClusters_CheckSystemServicesUpdatesAvailable" enabled="true" enableRequestOutputParameter="false" disableSendingOfRequest="false">
+                        <description><![CDATA[]]></description>
+                        <request httpmethod="POST" urlpath="/subscriptions/[subscriptionId]/resourceGroups/[resourceGroupName]/providers/Microsoft.MachineLearningCompute/operationalizationClusters/[clusterName]/checkSystemServicesUpdatesAvailable?api-version=[api-version]">
+                            <headers />
+                            <bodycontent type="0" />
+                        </request>
+                        <parameters>
+                            <actionparameter name="api-version" expose="true" datatype="64">
+                                <initialvalue><![CDATA[]]></initialvalue>
+                                <description><![CDATA[The version of the Microsoft.MachineLearningCompute resource provider API to use.]]></description>
+                            </actionparameter>
+                            <actionparameter name="subscriptionId" expose="true" datatype="64">
+                                <initialvalue><![CDATA[]]></initialvalue>
+                                <description><![CDATA[The Azure subscription ID.]]></description>
+                            </actionparameter>
+                            <actionparameter name="resourceGroupName" expose="true" datatype="64">
+                                <initialvalue><![CDATA[]]></initialvalue>
+                                <description><![CDATA[Name of the resource group in which the cluster is located.]]></description>
+                            </actionparameter>
+                            <actionparameter name="clusterName" expose="true" datatype="64">
+                                <initialvalue><![CDATA[]]></initialvalue>
+                                <description><![CDATA[The name of the cluster.]]></description>
+                            </actionparameter>
+                        </parameters>
+                        <outputparameters>
+                            <parameters />
+                            <code><![CDATA[]]></code>
+                        </outputparameters>
+                    </action>
+                    <action id="9" name="OperationalizationClusters_ListKeys" enabled="true" enableRequestOutputParameter="false" disableSendingOfRequest="false">
+                        <description><![CDATA[]]></description>
+                        <request httpmethod="POST" urlpath="/subscriptions/[subscriptionId]/resourceGroups/[resourceGroupName]/providers/Microsoft.MachineLearningCompute/operationalizationClusters/[clusterName]/listKeys?api-version=[api-version]">
+                            <headers />
+                            <bodycontent type="0" />
+                        </request>
+                        <parameters>
+                            <actionparameter name="api-version" expose="true" datatype="64">
+                                <initialvalue><![CDATA[]]></initialvalue>
+                                <description><![CDATA[The version of the Microsoft.MachineLearningCompute resource provider API to use.]]></description>
+                            </actionparameter>
+                            <actionparameter name="subscriptionId" expose="true" datatype="64">
+                                <initialvalue><![CDATA[]]></initialvalue>
+                                <description><![CDATA[The Azure subscription ID.]]></description>
+                            </actionparameter>
+                            <actionparameter name="resourceGroupName" expose="true" datatype="64">
+                                <initialvalue><![CDATA[]]></initialvalue>
+                                <description><![CDATA[Name of the resource group in which the cluster is located.]]></description>
+                            </actionparameter>
+                            <actionparameter name="clusterName" expose="true" datatype="64">
+                                <initialvalue><![CDATA[]]></initialvalue>
+                                <description><![CDATA[The name of the cluster.]]></description>
+                            </actionparameter>
+                        </parameters>
+                        <outputparameters>
+                            <parameters />
+                            <code><![CDATA[]]></code>
+                        </outputparameters>
+                    </action>
+                    <action id="10" name="OperationalizationClusters_UpdateSystemServices" enabled="true" enableRequestOutputParameter="false" disableSendingOfRequest="false">
+                        <description><![CDATA[]]></description>
+                        <request httpmethod="POST" urlpath="/subscriptions/[subscriptionId]/resourceGroups/[resourceGroupName]/providers/Microsoft.MachineLearningCompute/operationalizationClusters/[clusterName]/updateSystemServices?api-version=[api-version]">
+                            <headers />
+                            <bodycontent type="0" />
+                        </request>
+                        <parameters>
+                            <actionparameter name="api-version" expose="true" datatype="64">
+                                <initialvalue><![CDATA[]]></initialvalue>
+                                <description><![CDATA[The version of the Microsoft.MachineLearningCompute resource provider API to use.]]></description>
+                            </actionparameter>
+                            <actionparameter name="subscriptionId" expose="true" datatype="64">
+                                <initialvalue><![CDATA[]]></initialvalue>
+                                <description><![CDATA[The Azure subscription ID.]]></description>
+                            </actionparameter>
+                            <actionparameter name="resourceGroupName" expose="true" datatype="64">
+                                <initialvalue><![CDATA[]]></initialvalue>
+                                <description><![CDATA[Name of the resource group in which the cluster is located.]]></description>
+                            </actionparameter>
+                            <actionparameter name="clusterName" expose="true" datatype="64">
+                                <initialvalue><![CDATA[]]></initialvalue>
+                                <description><![CDATA[The name of the cluster.]]></description>
+                            </actionparameter>
+                        </parameters>
+                        <outputparameters>
+                            <parameters />
+                            <code><![CDATA[]]></code>
+                        </outputparameters>
+                    </action>
+                </actions>
+                <commonparameters>
+                    <actionparameter name="[Base URL]" expose="true" datatype="64">
+                        <initialvalue><![CDATA[https://management.azure.com]]></initialvalue>
+                        <description><![CDATA[The base Url value of the REST service.]]></description>
+                    </actionparameter>
+                </commonparameters>
+                <commonheaders />
+                <commonauthentications>
+                    <authentication type="4" scope="" authorizationserver="https://login.microsoftonline.com/common/oauth2/authorize">
+                        <credential credentialname="Machine Learning Compute Management Client Credential" exposetoprocess="false" inputparametername="" />
+                    </authentication>
+                </commonauthentications>
+                <commoncode>
+                    <codeproperties code="" language="csharp">
+                        <namespaces>
+                            <namespace>System</namespace>
+                            <namespace>System.Drawing</namespace>
+                            <namespace>System.Data</namespace>
+                        </namespaces>
+                        <references>
+                            <reference>System.dll</reference>
+                            <reference>System.Data.dll</reference>
+                            <reference>System.Xml.dll</reference>
+                            <reference>System.Drawing.dll</reference>
+                        </references>
+                    </codeproperties>
+                </commoncode>
+                <configurationsettings>
+                    <configurationsettings requesttimeout="10" authserverrequesttimeout="10" />
+                </configurationsettings>
+            </configuration>
+        </webapiservice>
+    </bpr:contents>
+</bpr:release>
